@@ -1,0 +1,50 @@
+/* line 1, ../Diplomatura_Django/sports/static_dev/scss/header.scss */
+.nav_text_color {
+  color: white;
+}
+
+/* line 5, ../Diplomatura_Django/sports/static_dev/scss/header.scss */
+.mi_navbar {
+  position: absolute;
+  z-index: 2;
+}
+
+/* line 11, ../Diplomatura_Django/sports/static_dev/scss/header.scss */
+.main_section {
+  position: absolute;
+  z-index: 1;
+}
+
+/* line 17, ../Diplomatura_Django/sports/static_dev/scss/header.scss */
+.table_section {
+  background-image: url("https://picsum.photos/400/400?random");
+}
+
+/* line 22, ../Diplomatura_Django/sports/static_dev/scss/header.scss */
+.section_player {
+  background-color: black;
+}
+
+/* line 26, ../Diplomatura_Django/sports/static_dev/scss/header.scss */
+.card_player {
+  margin-left: 30px;
+  margin-right: 30px;
+  background-color: black;
+  color: white;
+  width: 18rem;
+  margin-top: 2rem;
+}
+
+/* line 43, ../Diplomatura_Django/sports/static_dev/scss/header.scss */
+.footer_card {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* line 49, ../Diplomatura_Django/sports/static_dev/scss/header.scss */
+.background_gradient {
+  background: linear-gradient(45deg, #246e0f 12%, #103066 18%, #4b8c3f 84%);
+  background-blend-mode: normal;
+}
+
+/*# sourceMappingURL=header.css.map */
