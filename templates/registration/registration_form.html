@@ -4,11 +4,14 @@
 {% block title %}{% trans "Register for an account" %}{% endblock %}
 
 {% block content %}
+<div class="d-flex align-items-center justify-content-center" style="height: 40vh;">
 <form method="post" action="">
     {% csrf_token %}
     {{ form.as_p }}
-    <input type="submit" value="{% trans 'Submit' %}" />
+    <!-- <input type="submit" value="{% trans 'Submit' %}" /> -->
+    <input type="submit" value="{% trans 'Submit' %}" class="btn btn-primary"/>
 </form>
+</div>
 {% endblock %}
 
 

@@ -5,48 +5,46 @@
 
 <body>
 
-    <nav class="container-fluid navbar justify-content-center align-items-end" data-bs-theme="dark"
-        style="height: 230px; background-color:#0d0d0e93; z-index: 6; position:absolute">
-        <div>
-            <ul class="nav justify-content-center">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Active</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
-                </li>
-            </ul>
-        </div>
+
+    <nav class="navbar container-fluid justify-content-center align-items-end"
+        style="height: 230px; background-color:#0d0d0e93; z-index: 6; position:absolute;" data-bs-theme="dark">
+
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link nav_text_color" href="#">HOME</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link nav_text_color" href="#">FIXTURE</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link nav_text_color" href="#">POSICIONES</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link nav_text_color" href="#">GALERIA</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link nav_text_color" href="#">SUSCRIBIRSE</a>
+            </li>
+        </ul>
+
     </nav>
 
-    <div id="carouselExampleFade" class="carousel slide carousel-fade" style="height: 100vh;">
+
+    <div id="carouselExampleFade" class="carousel slide carousel-fade">
         <div class="carousel-inner">
 
 
             <div class="carousel-item active">
-                <img class="card-img-top pb-1 img_lat" src="/media/{{carrousel_main_image.image}}" />
+                <img class="card-img-top pb-1 img-fluid" src="/media/{{carrousel_main_image.image}}" height="800px" />
             </div>
 
             {% for carrousel in images_carrousel %}
             <div class="carousel-item">
-                <img class="card-img-top pb-1 img_lat" src="/media/{{carrousel.image}}" />
+                <img class="card-img-top pb-1 img-fluid" src="/media/{{carrousel.image}}" height="800px" />
             </div>
-            <!--             
-            <div class="carousel-item">
-                <img class="card-img-top pb-2 img_lat" src="https://picsum.photos/700/401?random" />
-            </div>
-            
-            <div class="carousel-item">
-                <img class="card-img-top pb-3 img_lat" src="https://picsum.photos/700/390?random" />
-            </div> -->
             {% endfor %}
         </div>
+
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
@@ -58,18 +56,23 @@
     </div>
 
 
-    <section>
-        <div class="d-flex justify-content-center align-items-center" style="height: 300px;">
+    <section style="margin-top: 10px;">
+        <div class="d-flex justify-content-center align-items-center" style="height: 300px; margin-top: 10px;">
             <div>
-                <img src="https://picsum.photos/200/200?random" class="rounded float-start" alt="...">
+                <img src="/media/{{proximo_partido.imagen_escudo_local}}" class="rounded float-start" alt="..."
+                    height="200" width="200">
+                <p style="text-align: center;">{{ proximo_partido.club_local }}</p>
             </div>
             <div>
                 <h2 style="margin-right: 20px; margin-left: 20px;"> VS </h2>
             </div>
             <div>
-                <img src="https://picsum.photos/200/200?random" class="rounded float-start" alt="...">
+                <img src="/media/{{proximo_partido.imagen_escudo_visitante}}" class="rounded float-start" alt="..."
+                    height="200" width="200">
+                <p style="text-align: center;">{{ proximo_partido.club_visitante }}</p>
             </div>
         </div>
+
         <div class="d-flex justify-content-center align-items-center">
             <div style="margin-bottom: 22px; margin-right: 10px;">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -86,94 +89,42 @@
 
 
     <section class=" d-flex justify-content-center align-items-center table_section">
-        <table class="table table-dark table-striped" style="width: 50%; margin-top: 30px;">
+        <table class="table table-dark table-striped" style="width: 30%; margin: 20px;">
             <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
+                    <th scope="col">Jugador</th>
+                    <th scope="col">Posicion</th>
                 </tr>
             </thead>
             <tbody>
+                {% for formacion in formacion_club_local %}
                 <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
+                    <th scope="row">{{formacion.numero}}</th>
+                    <td>{{formacion.nombre_jugador}}</td>
+                    <td>{{formacion.posicion}}</td>
                 </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                </tr>
+                {% endfor %}
 
-                <tr>
-                    <th scope="row">4</th>
-                    <td colspan="2">Larry the Bird</td>
-                </tr>
+            </tbody>
+        </table>
 
+        <table class="table table-dark table-striped" style="width: 30%; margin: 20px;">
+            <thead>
                 <tr>
-                    <th scope="row">5</th>
-                    <td colspan="2">Larry the Bird</td>
+                    <th scope="col">#</th>
+                    <th scope="col">Jugador</th>
+                    <th scope="col">Posicion</th>
                 </tr>
-
+            </thead>
+            <tbody>
+                {% for formacion in formacion_club_visitante %}
                 <tr>
-                    <th scope="row">6</th>
-                    <td colspan="2">Larry the Bird</td>
+                    <th scope="row">{{formacion.numero}}</th>
+                    <td>{{formacion.nombre_jugador}}</td>
+                    <td>{{formacion.posicion}}</td>
                 </tr>
-
-                <tr>
-                    <th scope="row">7</th>
-                    <td colspan="2">Larry the Bird</td>
-                </tr>
-
-                <tr>
-                    <th scope="row">8</th>
-                    <td colspan="2">Larry the Bird</td>
-                </tr>
-
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                </tr>
-
-                <tr>
-                    <th scope="row">4</th>
-                    <td colspan="2">Larry the Bird</td>
-                </tr>
-
-                <tr>
-                    <th scope="row">5</th>
-                    <td colspan="2">Larry the Bird</td>
-                </tr>
-
-                <tr>
-                    <th scope="row">6</th>
-                    <td colspan="2">Larry the Bird</td>
-                </tr>
-
-                <tr>
-                    <th scope="row">7</th>
-                    <td colspan="2">Larry the Bird</td>
-                </tr>
-
-                <tr>
-                    <th scope="row">8</th>
-                    <td colspan="2">Larry the Bird</td>
-                </tr>
+                {% endfor %}
 
             </tbody>
         </table>
@@ -181,7 +132,6 @@
     </section>
 
     <section class="section_player">
-        <!-- <h1 style="color: white">HOLA SECTION PLAER</h1> -->
         <div class="d-flex justify-content-center align-items-center">
 
             {% for jugador in jugadores %}
@@ -196,18 +146,19 @@
         </div>
 
         <div class=" d-flex justify-content-center align-items-center">
-            <button type="button" class="btn btn-dark" style="margin-top: 20px; margin-bottom: 20px;">Ver
-                jugadores</button>
-
+            <a type="button" class="btn btn-dark" style="margin-top: 20px; margin-bottom: 20px;"
+                href="{% url 'ver_jugadores' %}">Ver jugadores</a>
         </div>
     </section>
     <footer class="d-flex justify-content-center align-items-center background_gradient" style="height:200px">
 
-        <img src="https://picsum.photos/100/100?random" class="footer_card rounded float-start">
+        <!-- <img  src="/media/{{img_nav.image}}" class="rounded float-start" alt="..." height="100" width="100"> -->
+        {% for img in img_foo %}
+        <img src="/media/{{img.image}}" class="footer_card rounded float-start" height="100" width="100">
+        {% endfor %}
+        <!-- <img src="https://picsum.photos/100/100?random" class="footer_card rounded float-start">
 
-        <img src="https://picsum.photos/100/100?random" class="footer_card rounded float-start">
-
-        <img src="https://picsum.photos/100/100?random" class="footer_card rounded float-start">
+        <img src="https://picsum.photos/100/100?random" class="footer_card rounded float-start"> -->
     </footer>
 
 </body>

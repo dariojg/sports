@@ -8,9 +8,17 @@ class CarrouselImage(models.Model):
     activado = models.BooleanField(default=False)
 
 
-class FooterLink(models.Model):
-    pass
-
-
-class NavLink(models.Model):
-    pass
+class ImagesHome(models.Model):
+    FOOTER = "footer"
+    HEADER = "feader"
+    NAV = "nav"
+    TIPOS = (
+        (FOOTER, "footer"),
+        (HEADER, "header"),
+        (NAV, "nav"),
+    )
+    nombre = models.SlugField(max_length=50, blank=True, null=True)
+    image = models.ImageField(upload_to="images_home/", blank=True, null=True)
+    type = models.CharField(max_length=50, choices=TIPOS, null=True)
+    activado = models.BooleanField(default=False)
+    # link = models.URLField()

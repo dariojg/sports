@@ -14,7 +14,7 @@ class Jugador(models.Model):
         return "{} {}".format(self.nombre, self.apellido)
 
 
-class Estadistica(models.Model):
+class Estadistica(models.Model):  # TODO
     PASES = "Pases"
     GOLES = "Goles"
     PARTIDOS_JUGADOS = "Partidos Jugados"

@@ -22,6 +22,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path("", include("home.urls")),
+    path("jugadores", include('jugadores.urls')),
     path(
         "accounts/", include("registration.backends.default.urls")
     ),  # registration-redux

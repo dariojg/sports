@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import CarrouselImage
+from .models import CarrouselImage, ImagesHome
 
 
 @admin.register(CarrouselImage)
@@ -8,3 +8,21 @@ class CarrouselAdmin(admin.ModelAdmin):
     ordering = ["-orden"]
     list_filter = ("titulo_imagen",)
     search_fields = ("titulo_imagen",)
+
+
+@admin.register(ImagesHome)
+class ImagesHome(admin.ModelAdmin):
+    list_display = [
+        "nombre",
+        "type",
+        "activado",
+    ]
+    list_filter = (
+        "nombre",
+        "type",
+        "activado",
+    )
+    search_fields = (
+        "nombre",
+        "type",
+    )
