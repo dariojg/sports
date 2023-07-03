@@ -1,14 +1,53 @@
 {% extends "layout.html" %}
-{% load static %}}
+{% load static %}
 
 {% block index %}
 
-<body>
+<body style="background-color: black;">
 
-    <h1> PAGINA JUGADORES</h1>
-    <h2>
-        Aqui va imagenes de todos los jugadores y detalle de los mismos
-    </h2>
+    <div class="container-fluid col-8" style="position: static;">
+        <div style="height: 200px;"></div>
+
+
+        <!-- TODO: CARGAR TODOS LOS JUGADORES EN ADMIN -->
+        <div class="row">
+            {% for jugador in jugadores %}
+            <div class="col">
+                <div class="card card_player">
+                    <img src="/media/{{jugador.imagen}}" class="card-img-top img_card">
+                    <div class="card-body ">
+                        <p class="card-text">{{jugador.nombre}} {{jugador.apellido}} <br /> {{jugador.posicion}}</p>
+                    </div>
+                </div>
+
+            </div>
+            {% endfor %}
+
+            {% for jugador in jugadores %}
+            <div class="col">
+                <div class="card card_player">
+                    <img src="/media/{{jugador.imagen}}" class="card-img-top img_card">
+                    <div class="card-body">
+                        <p class="card-text">{{jugador.nombre}} {{jugador.apellido}} <br /> {{jugador.posicion}}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+            {% for jugador in jugadores %}
+            <div class="col">
+                <div class="card card_player">
+                    <img src="/media/{{jugador.imagen}}" class="card-img-top img_card">
+                    <div class="card-body">
+                        <p class="card-text">{{jugador.nombre}} {{jugador.apellido}} <br /> {{jugador.posicion}}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+
 </body>
 
 {% endblock %}

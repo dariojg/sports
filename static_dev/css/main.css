@@ -14813,51 +14813,63 @@ fieldset:disabled .btn {
   }
 }
 
-/* line 1, ../Diplomatura_Django/sports/static_dev/scss/header.scss */
+/* line 1, ../Diplomatura_Django/sports/static_dev/scss/nav.scss */
 .nav_text_color {
   font: normal bolder 22px/1 "proxima-nova";
   color: white;
 }
 
-/* line 8, ../Diplomatura_Django/sports/static_dev/scss/header.scss */
+/* line 8, ../Diplomatura_Django/sports/static_dev/scss/nav.scss */
 .mi_navbar {
   position: absolute;
   z-index: 2;
 }
 
-/* line 14, ../Diplomatura_Django/sports/static_dev/scss/header.scss */
-.main_section {
-  position: absolute;
-  z-index: 1;
-}
-
-/* line 20, ../Diplomatura_Django/sports/static_dev/scss/header.scss */
+/* line 1, ../Diplomatura_Django/sports/static_dev/scss/index_home.scss */
 .table_section {
   background-image: url("https://picsum.photos/400/400?random");
 }
 
-/* line 25, ../Diplomatura_Django/sports/static_dev/scss/header.scss */
+/* line 6, ../Diplomatura_Django/sports/static_dev/scss/index_home.scss */
 .section_player {
-  background-color: black;
+  background-color: white;
 }
 
-/* line 29, ../Diplomatura_Django/sports/static_dev/scss/header.scss */
+/* line 16, ../Diplomatura_Django/sports/static_dev/scss/index_home.scss */
+.section_formacion {
+  background: radial-gradient(100% 100% at 50% 50%, #d3d7e3 38%, #2d332c 78%);
+  background-blend-mode: normal;
+}
+
+/* line 25, ../Diplomatura_Django/sports/static_dev/scss/index_home.scss */
 .card_player {
-  margin-left: 30px;
-  margin-right: 30px;
+  margin-left: 5px;
+  margin-right: 5px;
   background-color: black;
   color: white;
   width: 18rem;
   margin-top: 2rem;
+  border: 3px solid rgba(224, 232, 178, 0.749);
+  border-radius: 10px;
 }
 
-/* line 46, ../Diplomatura_Django/sports/static_dev/scss/header.scss */
+/* line 45, ../Diplomatura_Django/sports/static_dev/scss/index_home.scss */
+.img_card {
+  max-height: 280px;
+}
+
+/* line 2, ../Diplomatura_Django/sports/static_dev/scss/footer.scss */
 .footer_card {
   margin-left: 20px;
   margin-right: 20px;
 }
 
-/* line 52, ../Diplomatura_Django/sports/static_dev/scss/header.scss */
+/* line 7, ../Diplomatura_Django/sports/static_dev/scss/footer.scss */
+footer {
+  margin-top: 20px;
+}
+
+/* line 13, ../Diplomatura_Django/sports/static_dev/scss/footer.scss */
 .background_gradient {
   background: linear-gradient(45deg, #246e0f 12%, #103066 18%, #4b8c3f 84%);
   background-blend-mode: normal;

@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "footer.css",
+	"sources": [
+		"../scss/footer.scss"
+	],
+	"sourcesContent": [
+		"\n.footer_card {\n    margin-left: 20px;\n    margin-right: 20px;\n}\n\nfooter {\n    margin-top: 20px;\n}\n\n\n\n.background_gradient {\n    background: linear-gradient(45deg,\n            rgba(36, 110, 15, 1) 12%,\n            rgba(16, 48, 102, 1) 18%,\n            rgba(75, 140, 63, 1) 84%);\n    background-blend-mode: normal;\n}"
+	],
+	"names": [],
+	"mappings": ";AACA,AAAA,YAAY,CAAC;EACT,WAAW,EAAE,IAAI;EACjB,YAAY,EAAE,IAAI;CACrB;;;AAED,AAAA,MAAM,CAAC;EACH,UAAU,EAAE,IAAI;CACnB;;;AAID,AAAA,oBAAoB,CAAC;EACjB,UAAU,EAAE,6DAGqB;EACjC,qBAAqB,EAAE,MAAM;CAChC"
+}

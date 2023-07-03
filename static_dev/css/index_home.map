@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "index_home.css",
+	"sources": [
+		"../scss/index_home.scss"
+	],
+	"sourcesContent": [
+		".table_section {\n    background-image: url('https://picsum.photos/400/400?random');\n\n}\n\n.section_player {\n    // background: linear-gradient(\n    //     45deg,\n    //     rgba(222, 209, 146, 1) 12%,\n    //     rgba(102, 194, 85, 1) 84%\n    //   );\n    //   background-blend-mode: normal;\n    background-color: white;\n}\n\n.section_formacion {\n    background: radial-gradient(\n        100% 100% at 50% 50%,\n        rgba(211, 215, 227, 1) 38%,\n        rgba(45, 51, 44, 1) 78%\n      );\n      background-blend-mode: normal;\n}\n\n.card_player {\n    margin-left: 5px;\n    margin-right: 5px;\n    background-color: black;\n    color: white;\n    width: 18rem;\n    margin-top: 2rem;\n\n    border: 3px solid rgba(224, 232, 178, 0.749);\n    border-radius: 10px;\n\n    // background: linear-gradient(\n    //     45deg,\n    //     rgba(16, 48, 102, 1) 16%,\n    //     rgba(45, 80, 168, 1) 54%,\n    //     rgba(45, 80, 168, 1) 93%\n    //   );\n    //   background-blend-mode: normal;\n}\n\n.img_card {\n    max-height: 280px;\n}\n"
+	],
+	"names": [],
+	"mappings": ";AAAA,AAAA,cAAc,CAAC;EACX,gBAAgB,EAAE,2CAA2C;CAEhE;;;AAED,AAAA,eAAe,CAAC;EAOZ,gBAAgB,EAAE,KAAK;CAC1B;;;AAED,AAAA,kBAAkB,CAAC;EACf,UAAU,EAAE,+DAIT;EACD,qBAAqB,EAAE,MAAM;CAClC;;;AAED,AAAA,YAAY,CAAC;EACT,WAAW,EAAE,GAAG;EAChB,YAAY,EAAE,GAAG;EACjB,gBAAgB,EAAE,KAAK;EACvB,KAAK,EAAE,KAAK;EACZ,KAAK,EAAE,KAAK;EACZ,UAAU,EAAE,IAAI;EAEhB,MAAM,EAAE,GAAG,CAAC,KAAK,CAAC,0BAA0B;EAC5C,aAAa,EAAE,IAAI;CAStB;;;AAED,AAAA,SAAS,CAAC;EACN,UAAU,EAAE,KAAK;CACpB"
+}

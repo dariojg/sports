@@ -1,0 +1,18 @@
+/* line 2, ../Diplomatura_Django/sports/static_dev/scss/footer.scss */
+.footer_card {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* line 7, ../Diplomatura_Django/sports/static_dev/scss/footer.scss */
+footer {
+  margin-top: 20px;
+}
+
+/* line 13, ../Diplomatura_Django/sports/static_dev/scss/footer.scss */
+.background_gradient {
+  background: linear-gradient(45deg, #246e0f 12%, #103066 18%, #4b8c3f 84%);
+  background-blend-mode: normal;
+}
+
+/*# sourceMappingURL=footer.css.map */

@@ -1,0 +1,47 @@
+.table_section {
+    background-image: url('https://picsum.photos/400/400?random');
+
+}
+
+.section_player {
+    // background: linear-gradient(
+    //     45deg,
+    //     rgba(222, 209, 146, 1) 12%,
+    //     rgba(102, 194, 85, 1) 84%
+    //   );
+    //   background-blend-mode: normal;
+    background-color: white;
+}
+
+.section_formacion {
+    background: radial-gradient(
+        100% 100% at 50% 50%,
+        rgba(211, 215, 227, 1) 38%,
+        rgba(45, 51, 44, 1) 78%
+      );
+      background-blend-mode: normal;
+}
+
+.card_player {
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: black;
+    color: white;
+    width: 18rem;
+    margin-top: 2rem;
+
+    border: 3px solid rgba(224, 232, 178, 0.749);
+    border-radius: 10px;
+
+    // background: linear-gradient(
+    //     45deg,
+    //     rgba(16, 48, 102, 1) 16%,
+    //     rgba(45, 80, 168, 1) 54%,
+    //     rgba(45, 80, 168, 1) 93%
+    //   );
+    //   background-blend-mode: normal;
+}
+
+.img_card {
+    max-height: 280px;
+}

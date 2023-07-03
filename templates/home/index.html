@@ -4,35 +4,8 @@
 {% block index %}
 
 <body>
-
-
-    <nav class="navbar container-fluid justify-content-center align-items-end"
-        style="height: 230px; background-color:#0d0d0e93; z-index: 6; position:absolute;" data-bs-theme="dark">
-
-        <ul class="nav justify-content-center">
-            <li class="nav-item">
-                <a class="nav-link nav_text_color" href="#">HOME</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link nav_text_color" href="#">FIXTURE</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link nav_text_color" href="#">POSICIONES</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link nav_text_color" href="#">GALERIA</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link nav_text_color" href="#">SUSCRIBIRSE</a>
-            </li>
-        </ul>
-
-    </nav>
-
-
     <div id="carouselExampleFade" class="carousel slide carousel-fade">
         <div class="carousel-inner">
-
 
             <div class="carousel-item active">
                 <img class="card-img-top pb-1 img-fluid" src="/media/{{carrousel_main_image.image}}" height="800px" />
@@ -56,20 +29,22 @@
     </div>
 
 
-    <section style="margin-top: 10px;">
-        <div class="d-flex justify-content-center align-items-center" style="height: 300px; margin-top: 10px;">
-            <div>
-                <img src="/media/{{proximo_partido.imagen_escudo_local}}" class="rounded float-start" alt="..."
-                    height="200" width="200">
-                <p style="text-align: center;">{{ proximo_partido.club_local }}</p>
-            </div>
-            <div>
-                <h2 style="margin-right: 20px; margin-left: 20px;"> VS </h2>
-            </div>
-            <div>
-                <img src="/media/{{proximo_partido.imagen_escudo_visitante}}" class="rounded float-start" alt="..."
-                    height="200" width="200">
-                <p style="text-align: center;">{{ proximo_partido.club_visitante }}</p>
+    <section style="margin-top: 10px;" class="container">
+        <div class="d-flex justify-content-center " style="height: 300px; margin-top: 10px;">
+            <div class="row  align-items-center ">
+                <div class="col">
+                    <img src="/media/{{proximo_partido.imagen_escudo_local}}" class="rounded float-start" alt="..."
+                        height="200" width="200">
+                    <p style="text-align: center;">{{ proximo_partido.club_local }}</p>
+                </div>
+                <div class="col">
+                    <h2 style="margin-right: 20px; margin-left: 20px;"> VS </h2>
+                </div>
+                <div class="col">
+                    <img src="/media/{{proximo_partido.imagen_escudo_visitante}}" class="rounded float-start" alt="..."
+                        height="200" width="200">
+                    <p style="text-align: center;">{{ proximo_partido.club_visitante }}</p>
+                </div>
             </div>
         </div>
 
@@ -88,7 +63,7 @@
     </section>
 
 
-    <section class=" d-flex justify-content-center align-items-center table_section">
+    <section class=" d-flex justify-content-center align-items-center table_section section_formacion ">
         <table class="table table-dark table-striped" style="width: 30%; margin: 20px;">
             <thead>
                 <tr>
@@ -108,7 +83,6 @@
 
             </tbody>
         </table>
-
         <table class="table table-dark table-striped" style="width: 30%; margin: 20px;">
             <thead>
                 <tr>
@@ -128,21 +102,22 @@
 
             </tbody>
         </table>
-
     </section>
 
     <section class="section_player">
-        <div class="d-flex justify-content-center align-items-center">
-
-            {% for jugador in jugadores %}
-            <div class="card card_player">
-                <img src="/media/{{jugador.imagen}}" class="card-img-top">
-                <div class="card-body">
-                    <p class="card-text">{{jugador.nombre}} {{jugador.apellido}} <br /> {{jugador.posicion}}</p>
+        <div class="d-flex justify-content-center align-items-center container">
+            <div class="row">
+                {% for jugador in jugadores|slice:":4" %}
+                <div class="col">
+                    <div class="card card_player ">
+                        <img src="/media/{{jugador.imagen}}" class="card-img-top img_card">
+                        <div class="card-body">
+                            <p class="card-text">{{jugador.nombre}} {{jugador.apellido}} <br /> {{jugador.posicion}}</p>
+                        </div>
+                    </div>
                 </div>
+                {% endfor %}
             </div>
-            {% endfor %}
-
         </div>
 
         <div class=" d-flex justify-content-center align-items-center">
@@ -150,16 +125,6 @@
                 href="{% url 'ver_jugadores' %}">Ver jugadores</a>
         </div>
     </section>
-    <footer class="d-flex justify-content-center align-items-center background_gradient" style="height:200px">
-
-        <!-- <img  src="/media/{{img_nav.image}}" class="rounded float-start" alt="..." height="100" width="100"> -->
-        {% for img in img_foo %}
-        <img src="/media/{{img.image}}" class="footer_card rounded float-start" height="100" width="100">
-        {% endfor %}
-        <!-- <img src="https://picsum.photos/100/100?random" class="footer_card rounded float-start">
-
-        <img src="https://picsum.photos/100/100?random" class="footer_card rounded float-start"> -->
-    </footer>
 
 </body>
 

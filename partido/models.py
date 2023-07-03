@@ -24,3 +24,6 @@ class Formacion(models.Model):
 
     def __str__(self):
         return "{} {}".format(self.nombre_jugador, self.posicion)
+
+    class Meta:
+        verbose_name_plural = "Formaciones"

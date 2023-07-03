@@ -4,7 +4,12 @@
 
 {% block content %}
 
-    {% block index %}
-    {% endblock %}
+
+{% include 'nav.html' %}
+
+{% block index %}
+{% endblock %}
+
+{% include 'footer.html'  %}
 
 {% endblock %}

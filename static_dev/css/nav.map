@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "nav.css",
+	"sources": [
+		"../scss/nav.scss"
+	],
+	"sourcesContent": [
+		".nav_text_color {\n    font: normal bolder 22px/1 \"proxima-nova\";\n    // letter-spacing: 3px;\n    // text-shadow: 3px 0px 0px rgba(255, 247, 247, 0.3);\n    color: white;\n}\n\n.mi_navbar {\n    position: absolute;\n    z-index: 2;\n}\n\n"
+	],
+	"names": [],
+	"mappings": ";AAAA,AAAA,eAAe,CAAC;EACZ,IAAI,EAAE,mCAAmC;EAGzC,KAAK,EAAE,KAAK;CACf;;;AAED,AAAA,UAAU,CAAC;EACP,QAAQ,EAAE,QAAQ;EAClB,OAAO,EAAE,CAAC;CACb"
+}

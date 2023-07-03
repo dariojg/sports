@@ -1,0 +1,13 @@
+/* line 1, ../Diplomatura_Django/sports/static_dev/scss/nav.scss */
+.nav_text_color {
+  font: normal bolder 22px/1 "proxima-nova";
+  color: white;
+}
+
+/* line 8, ../Diplomatura_Django/sports/static_dev/scss/nav.scss */
+.mi_navbar {
+  position: absolute;
+  z-index: 2;
+}
+
+/*# sourceMappingURL=nav.css.map */

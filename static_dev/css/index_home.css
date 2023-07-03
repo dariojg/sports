@@ -1,0 +1,34 @@
+/* line 1, ../Diplomatura_Django/sports/static_dev/scss/index_home.scss */
+.table_section {
+  background-image: url("https://picsum.photos/400/400?random");
+}
+
+/* line 6, ../Diplomatura_Django/sports/static_dev/scss/index_home.scss */
+.section_player {
+  background-color: white;
+}
+
+/* line 16, ../Diplomatura_Django/sports/static_dev/scss/index_home.scss */
+.section_formacion {
+  background: radial-gradient(100% 100% at 50% 50%, #d3d7e3 38%, #2d332c 78%);
+  background-blend-mode: normal;
+}
+
+/* line 25, ../Diplomatura_Django/sports/static_dev/scss/index_home.scss */
+.card_player {
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: black;
+  color: white;
+  width: 18rem;
+  margin-top: 2rem;
+  border: 3px solid rgba(224, 232, 178, 0.749);
+  border-radius: 10px;
+}
+
+/* line 45, ../Diplomatura_Django/sports/static_dev/scss/index_home.scss */
+.img_card {
+  max-height: 280px;
+}
+
+/*# sourceMappingURL=index_home.css.map */

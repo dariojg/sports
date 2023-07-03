@@ -1,0 +1,12 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+
+<footer class="d-flex justify-content-center align-items-center background_gradient" style="height:200px">
+    {% for img in img_foo %}
+    <img src="/media/{{img.image}}" class="footer_card rounded float-start" height="100" width="100">
+    {% endfor %}
+</footer>
+
+</html>

@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+
+{% block nav %}
+<nav class="navbar container-fluid justify-content-center align-items-end"
+    style="height: 230px; background-color:#0d0d0e93; z-index: 6; position:absolute;" data-bs-theme="dark">
+
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link nav_text_color" href="{% url 'home' %}">HOME</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link nav_text_color" href="#">FIXTURE</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link nav_text_color" href="#">POSICIONES</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link nav_text_color" href="{% url 'ver_jugadores' %}">GALERIA</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link nav_text_color" href="#">SUSCRIBIRSE</a>
+        </li>
+    </ul>
+
+</nav>
+{% endblock %}
+
+</html>

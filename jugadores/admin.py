@@ -14,8 +14,6 @@ class JugadoresAdmin(admin.ModelAdmin):
     ]
     ordering = ["-apellido"]
     list_filter = (
-        "nombre",
-        "apellido",
         "club",
         "nacionalidad",
     )
